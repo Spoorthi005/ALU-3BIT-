@@ -1,0 +1,30 @@
+module alu_tb;
+	reg [2:0] opcode;
+	reg [3:0] a;
+	reg [3:0] b;
+
+	wire [3:0] out;
+
+	alubit uut (
+		.opcode(opcode), 
+		.a(a), 
+		.b(b), 
+		.out(out)
+	);
+
+	initial begin
+		// Initialize Inputs
+		opcode =3'b000;a = 3'b0011;b =3'b0001;
+		#10;
+		opcode =3'b001;a = 3'b0011;b =3'b0001;
+		#10;
+		opcode =3'b010;a = 3'b0011;b =3'b0001;
+		#10;
+		opcode =3'b011;a = 3'b0011;b =3'b0001;
+		#10;
+
+
+	end
+      
+endmodule
+
